@@ -160,14 +160,27 @@ a { color: inherit; }
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  background-image:
-    linear-gradient(180deg, rgba(18, 47, 58, 0.32) 0%, rgba(18, 47, 58, 0.52) 100%),
-    url("fondo.avif");
+  overflow: hidden;
+  color: var(--espuma);
+  padding: clamp(64px, 12vw, 128px) 0 0;
+}
+.hero-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -25%;
+  height: 150%;
+  background-image: url("fondo.avif");
   background-size: cover;
   background-position: center;
-  color: var(--espuma);
-  overflow: hidden;
-  padding: clamp(64px, 12vw, 128px) 0 0;
+  z-index: 0;
+  will-change: transform;
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 47, 58, 0.32) 0%, rgba(18, 47, 58, 0.52) 100%);
 }
 .hero-inner { position: relative; z-index: 1; max-width: 760px; }
 .hero-title {
@@ -208,9 +221,21 @@ a { color: inherit; }
 }
 .hero-facts span { font-size: 0.85rem; color: rgba(248, 245, 239, 0.75); }
 
-.waterline { position: relative; display: block; line-height: 0; margin-top: 56px; }
+/* La ola queda pegada al borde inferior del hero: el relleno del path se
+   extiende por debajo del viewBox, así que solo se mueve la cresta. */
+.waterline { position: relative; display: block; line-height: 0; margin-top: 56px; margin-bottom: -1px; }
 .waterline svg { width: 100%; height: 70px; display: block; }
-.waterline svg path { fill: var(--espuma); }
+.waterline svg path {
+  fill: var(--espuma);
+  transform-box: view-box;
+  transform-origin: center;
+  will-change: transform;
+  animation: waveBob 4.5s ease-in-out infinite alternate;
+}
+@keyframes waveBob {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
 
 /* ---------- Sections ---------- */
 .section { padding: clamp(64px, 10vw, 110px) 0; }
@@ -339,6 +364,14 @@ a { color: inherit; }
   color: var(--mar);
 }
 .zone-chips li:nth-child(odd) { background: rgba(48, 168, 192, 0.1); }
+.zone-note {
+  margin: 18px 0 0;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+.zone-note strong { color: var(--agua); }
 
 /* ---------- Contact ---------- */
 .contact { background: var(--arena); }
@@ -349,6 +382,7 @@ a { color: inherit; }
   align-items: start;
 }
 .contact-lead { color: var(--muted); margin: 0 0 26px; }
+.contact-list-wrap { font-style: normal; }
 .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
 .contact-list li { display: flex; align-items: flex-start; gap: 14px; font-weight: 500; }
 .contact-list a { text-decoration: none; font-weight: 600; color: var(--mar); }
@@ -407,6 +441,23 @@ a { color: inherit; }
 .footer-nav a:hover { color: #fff; }
 .footer-legal { margin: 0; font-size: 0.85rem; color: rgba(248, 245, 239, 0.6); border-top: 1px solid rgba(255,255,255,0.14); padding-top: 18px; }
 
+/* ---------- CTA flotante de WhatsApp ---------- */
+.whatsapp-fab {
+  display: none;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  place-items: center;
+  background: #25D366;
+  color: #06341a;
+  box-shadow: 0 10px 24px -8px rgba(6, 52, 26, 0.6);
+}
+.whatsapp-fab:focus-visible { outline: 3px solid var(--mar); outline-offset: 3px; }
+
 /* ---------- Reveal animation ---------- */
 .reveal {
   opacity: 0;
@@ -416,6 +467,7 @@ a { color: inherit; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
+  .waterline svg path { animation: none; }
 }
 
 /* ---------- Responsive ---------- */
@@ -428,6 +480,7 @@ a { color: inherit; }
   .header-inner { flex-wrap: wrap; height: auto; padding: 10px 0; row-gap: 6px; }
   .nav { order: 3; width: 100%; justify-content: center; gap: 18px; }
   .header-cta { display: none; }
+  .whatsapp-fab { display: grid; }
   .service-grid { grid-template-columns: 1fr; }
   .quote-inner { flex-direction: column; align-items: flex-start; }
   .quote-inner .btn { width: 100%; justify-content: center; }

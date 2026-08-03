@@ -1,22 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ClearPool — Mantenimiento de piscinas y jardines en Jávea</title>
   <meta name="description" content="Mantenimiento de piscinas y jardines en Jávea, Moraira y Teulada. Poda de palmeras, limpieza de parcelas y comunidades. 20 años de experiencia. Pide presupuesto." />
+  <meta name="author" content="ClearPool" />
+  <meta name="theme-color" content="#244c5a" />
+  <link rel="canonical" href="https://eariasvalor.github.io/Clearpool/" />
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ClearPool" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:title" content="ClearPool — Mantenimiento de piscinas y jardines en Jávea" />
+  <meta property="og:description" content="Mantenimiento de piscinas y jardines en Jávea, Moraira y Teulada. 20 años de experiencia. Pide presupuesto sin compromiso." />
+  <meta property="og:url" content="https://eariasvalor.github.io/Clearpool/" />
+  <meta property="og:image" content="https://eariasvalor.github.io/Clearpool/CLEARPOOL-LOGO-WEB.png" />
+  <meta property="og:image:alt" content="Logotipo de ClearPool" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ClearPool — Mantenimiento de piscinas y jardines en Jávea" />
+  <meta name="twitter:description" content="Mantenimiento de piscinas y jardines en Jávea, Moraira y Teulada. 20 años de experiencia." />
+  <meta name="twitter:image" content="https://eariasvalor.github.io/Clearpool/CLEARPOOL-LOGO-WEB.png" />
+
+  <link rel="icon" href="CLEARPOOL-LOGO-WEB.png" type="image/png" />
+  <link rel="apple-touch-icon" href="CLEARPOOL-LOGO-WEB.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="fondo.avif" type="image/avif" fetchpriority="high" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#servicios">Saltar a los servicios</a>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="ClearPool, inicio">
-        <img class="brand-logo" src="CLEARPOOL-LOGO-WEB.png" alt="ClearPool" width="150" height="43" />
+        <img class="brand-logo" src="CLEARPOOL-LOGO-WEB.png" alt="ClearPool" width="150" height="43" fetchpriority="high" decoding="async" />
       </a>
 
       <nav class="nav" aria-label="Principal">
@@ -26,24 +48,25 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="btn btn-whatsapp header-cta" href="https://wa.me/606447461?text=Hola%20quiero%20más%20información" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.14c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.22-3.66-.76-3.05-1.18-4.99-4.2-5.14-4.4-.15-.2-1.24-1.65-1.24-3.15 0-1.5.79-2.24 1.07-2.55.28-.3.62-.38.83-.38.21 0 .41 0 .6.01.19.01.45-.07.7.54.26.63.88 2.27.96 2.44.08.17.13.36.03.58-.1.22-.15.36-.3.55-.15.2-.31.44-.45.59-.15.17-.3.36-.13.7.17.34.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.12.64-.07.17-.2.72-.84.91-1.13.19-.29.39-.24.66-.14.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
+      <a class="btn btn-whatsapp header-cta" href="https://wa.me/34606447461?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.14c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.22-3.66-.76-3.05-1.18-4.99-4.2-5.14-4.4-.15-.2-1.24-1.65-1.24-3.15 0-1.5.79-2.24 1.07-2.55.28-.3.62-.38.83-.38.21 0 .41 0 .6.01.19.01.45-.07.7.54.26.63.88 2.27.96 2.44.08.17.13.36.03.58-.1.22-.15.36-.3.55-.15.2-.31.44-.45.59-.15.17-.3.36-.13.7.17.34.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.12.64-.07.17-.2.72-.84.91-1.13.19-.29.39-.24.66-.14.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
         WhatsApp
       </a>
 
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <p class="eyebrow eyebrow-light">Piscinas y jardines · Marina Alta</p>
-        <h1 id="hero-title" class="hero-title">Nos encargamos<br />de <span class="hl">todo</span>.</h1>
-        <p class="hero-sub">Mantenimiento de piscinas y jardines en Jávea, Moraira y Teulada. Tú disfruta de tu casa; nosotros cuidamos el resto.</p>
+        <p class="eyebrow eyebrow-light">Marina Alta</p>
+        <h1 id="hero-title" class="hero-title">Nos encargamos de <span class="hl">todo</span>.</h1>
+        <p class="hero-sub">Piscinas y jardines en Jávea, Moraira y Teulada.</p>
         <div class="hero-actions">
           <a class="btn btn-sol" href="#contacto">Pide presupuesto</a>
-          <a class="btn btn-ghost" href="https://wa.me/606447461?text=Hola%20quiero%20más%20información" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+          <a class="btn btn-ghost" href="https://wa.me/34606447461?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
         </div>
         <ul class="hero-facts">
           <li><strong>20 años</strong><span>de experiencia</span></li>
@@ -52,7 +75,7 @@
         </ul>
       </div>
       <div class="waterline" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v40H0z" fill="#F8F5EF"/></svg>
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" focusable="false"><path d="M0 40c120-40 240-40 360 0s240 40 360 0 240-40 360 0 240 40 360 0v60H0z"/></svg>
       </div>
     </section>
 
@@ -68,56 +91,56 @@
         <ul class="service-grid">
           <li class="service-card reveal">
             <span class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M8 30c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 38c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/><path d="M14 26V14a10 10 0 0 1 20 0v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 8v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" focusable="false"><path d="M8 30c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 38c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/><path d="M14 26V14a10 10 0 0 1 20 0v12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 8v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </span>
             <h3>Mantenimiento y reparación de piscinas</h3>
             <p>Limpieza, equilibrio químico, reparación de bombas y filtros y solución de cualquier incidencia técnica. Tu piscina siempre lista para el baño.</p>
-            <a class="service-link" href="#contacto">+ info</a>
+            <a class="service-link" href="#contacto" aria-label="Pedir información sobre mantenimiento y reparación de piscinas">+ info</a>
           </li>
 
           <li class="service-card reveal">
             <span class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M24 40V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 20c-6-8-14-6-14-6 0 0 2 10 14 12Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 24c5-7 13-5 13-5 0 0-1 9-13 11Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 40h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" focusable="false"><path d="M24 40V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 20c-6-8-14-6-14-6 0 0 2 10 14 12Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 24c5-7 13-5 13-5 0 0-1 9-13 11Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M16 40h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </span>
             <h3>Limpieza de jardines</h3>
             <p>Poda de setos y arbustos, corte de césped e instalación de riego. Jardines sanos y cuidados durante todo el año.</p>
-            <a class="service-link" href="#contacto">+ info</a>
+            <a class="service-link" href="#contacto" aria-label="Pedir información sobre limpieza de jardines">+ info</a>
           </li>
 
           <li class="service-card reveal">
             <span class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M24 42V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 20c-4-6-4-14 0-16 4 2 4 10 0 16Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 26c5-3 11-2 14-6-4-1-10 0-14 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 22c-5-3-11-2-14-6 4-1 10 0 14 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" focusable="false"><path d="M24 42V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 20c-4-6-4-14 0-16 4 2 4 10 0 16Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 26c5-3 11-2 14-6-4-1-10 0-14 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 22c-5-3-11-2-14-6 4-1 10 0 14 6Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
             </span>
             <h3>Poda de palmeras</h3>
             <p>Poda especializada y segura que favorece un crecimiento sano, previene enfermedades y cuida la estética de tu paisaje.</p>
-            <a class="service-link" href="#contacto">+ info</a>
+            <a class="service-link" href="#contacto" aria-label="Pedir información sobre poda de palmeras">+ info</a>
           </li>
 
           <li class="service-card reveal">
             <span class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M10 34l8-14 6 8 5-9 9 15Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 40h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18" cy="14" r="2.5" fill="currentColor"/><circle cx="30" cy="11" r="2" fill="currentColor"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" focusable="false"><path d="M10 34l8-14 6 8 5-9 9 15Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 40h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="18" cy="14" r="2.5" fill="currentColor"/><circle cx="30" cy="11" r="2" fill="currentColor"/></svg>
             </span>
             <h3>Limpieza de parcelas</h3>
             <p>Desbroce, retirada de residuos y mantenimiento general. Tu terreno limpio, ordenado y libre de riesgos.</p>
-            <a class="service-link" href="#contacto">+ info</a>
+            <a class="service-link" href="#contacto" aria-label="Pedir información sobre limpieza de parcelas">+ info</a>
           </li>
 
           <li class="service-card reveal">
             <span class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M12 42V22l12-8 12 8v20" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M20 42V32h8v10" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" focusable="false"><path d="M12 42V22l12-8 12 8v20" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 42h32" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M20 42V32h8v10" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>
             </span>
             <h3>Mantenimiento de comunidades y urbanizaciones</h3>
             <p>Cuidado de zonas comunes, piscinas comunitarias y jardines. Un entorno seguro y agradable para todos los vecinos.</p>
-            <a class="service-link" href="#contacto">+ info</a>
+            <a class="service-link" href="#contacto" aria-label="Pedir información sobre mantenimiento de comunidades y urbanizaciones">+ info</a>
           </li>
 
           <li class="service-card reveal">
             <span class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M14 42V20l10-7 10 7v22" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M10 42h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 42V30h-6v12" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M30 26h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <svg viewBox="0 0 48 48" fill="none" focusable="false"><path d="M14 42V20l10-7 10 7v22" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M10 42h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M24 42V30h-6v12" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M30 26h4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
             </span>
             <h3>Mantenimiento y cuidado de viviendas</h3>
             <p>Ideales para segundas residencias: limpieza, revisiones, pequeñas reparaciones y reformas. Tu casa lista cuando llegues.</p>
-            <a class="service-link" href="#contacto">+ info</a>
+            <a class="service-link" href="#contacto" aria-label="Pedir información sobre mantenimiento y cuidado de viviendas">+ info</a>
           </li>
         </ul>
       </div>
@@ -142,7 +165,7 @@
           <p class="eyebrow">Quiénes somos</p>
           <h2 id="nosotros-title" class="section-title">Un equipo de la Marina Alta, para tu casa</h2>
           <p>En ClearPool llevamos más de 20 años cuidando piscinas y jardines en la costa. Conocemos el clima, las plantas y el agua de aquí, y tratamos cada finca como si fuera nuestra.</p>
-          <p>Comunidades, particulares y propietarios de segunda residencia confían en nosotros porque hacemos lo prometido, cuando lo prometido.</p>
+          <p>Comunidades, particulares y propietarios de segunda residencia confían en nosotros porque hacemos lo prometido, cuando lo prometimos.</p>
         </div>
         <ul class="stats">
           <li class="stat reveal"><span class="stat-num">20+</span><span class="stat-label">años de experiencia</span></li>
@@ -163,8 +186,8 @@
           <li>Jávea</li>
           <li>Moraira</li>
           <li>Teulada</li>
-          <li>Marina Alta</li>
         </ul>
+        <p class="zone-note">y toda la <strong>Marina Alta</strong></p>
       </div>
     </section>
 
@@ -175,49 +198,54 @@
           <p class="eyebrow">Contacto</p>
           <h2 id="contacto-title" class="section-title">Hablemos de tu piscina y tu jardín</h2>
           <p class="contact-lead">Déjanos tus datos y nos pondremos en contacto contigo, o escríbenos directamente por WhatsApp.</p>
-          <ul class="contact-list">
-            <li>
-              <span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
-              <span>Av. Botánico Cabanilles 13, bajos C<br />Jávea (Alicante)</span>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
-              <a href="tel:606447461">606 447 461</a>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.14c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.22-3.66-.76-3.05-1.18-4.99-4.2-5.14-4.4-.15-.2-1.24-1.65-1.24-3.15 0-1.5.79-2.24 1.07-2.55.28-.3.62-.38.83-.38.21 0 .41 0 .6.01.19.01.45-.07.7.54.26.63.88 2.27.96 2.44.08.17.13.36.03.58-.1.22-.15.36-.3.55-.15.2-.31.44-.45.59-.15.17-.3.36-.13.7.17.34.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.12.64-.07.17-.2.72-.84.91-1.13.19-.29.39-.24.66-.14.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg></span>
-              <a href="https://wa.me/606447461?text=Hola%20quiero%20más%20información" target="_blank" rel="noopener">WhatsApp</a>
-            </li>
-          </ul>
+          <address class="contact-list-wrap">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg></span>
+                <span>Av. Botánico Cabanilles 13, bajos C<br />Jávea (Alicante)</span>
+              </li>
+              <li>
+                <span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" focusable="false"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+                <a href="tel:+34606447461">606 447 461</a>
+              </li>
+              <li>
+                <span class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.14c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.22-3.66-.76-3.05-1.18-4.99-4.2-5.14-4.4-.15-.2-1.24-1.65-1.24-3.15 0-1.5.79-2.24 1.07-2.55.28-.3.62-.38.83-.38.21 0 .41 0 .6.01.19.01.45-.07.7.54.26.63.88 2.27.96 2.44.08.17.13.36.03.58-.1.22-.15.36-.3.55-.15.2-.31.44-.45.59-.15.17-.3.36-.13.7.17.34.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.12.64-.07.17-.2.72-.84.91-1.13.19-.29.39-.24.66-.14.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg></span>
+                <a href="https://wa.me/34606447461?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">WhatsApp</a>
+              </li>
+            </ul>
+          </address>
         </div>
 
         <form class="contact-form" id="lead-form" novalidate>
           <div class="field">
             <label for="name">Nombre</label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
+            <input id="name" name="name" type="text" autocomplete="name" maxlength="80" required aria-required="true" />
           </div>
           <div class="field">
             <label for="phone">Teléfono</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" required aria-required="true" />
           </div>
           <div class="field">
             <label for="service">¿Qué necesitas?</label>
             <select id="service" name="service">
-              <option value="Piscina">Mantenimiento de piscina</option>
-              <option value="Jardín">Limpieza de jardín</option>
-              <option value="Palmeras">Poda de palmeras</option>
-              <option value="Parcela">Limpieza de parcela</option>
-              <option value="Comunidad">Comunidad / urbanización</option>
-              <option value="Vivienda">Cuidado de vivienda</option>
+              <option value="Mantenimiento de piscina">Mantenimiento de piscina</option>
+              <option value="Limpieza de jardín">Limpieza de jardín</option>
+              <option value="Poda de palmeras">Poda de palmeras</option>
+              <option value="Limpieza de parcela">Limpieza de parcela</option>
+              <option value="Comunidad / urbanización">Comunidad / urbanización</option>
+              <option value="Cuidado de vivienda">Cuidado de vivienda</option>
               <option value="Otro">Otro</option>
             </select>
           </div>
           <div class="field">
             <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="3" placeholder="Cuéntanos tu finca, ubicación y frecuencia..."></textarea>
+            <textarea id="message" name="message" rows="3" maxlength="600" placeholder="Cuéntanos tu finca, ubicación y frecuencia..."></textarea>
           </div>
-          <button class="btn btn-sol btn-block" type="submit">Enviar por WhatsApp</button>
+          <button class="btn btn-sol btn-block" type="submit" aria-describedby="form-note">Enviar por WhatsApp</button>
           <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+          <noscript>
+            <p class="form-note">El formulario necesita JavaScript. Escríbenos por <a href="https://wa.me/34606447461">WhatsApp</a> o llama al <a href="tel:+34606447461">606 447 461</a>.</p>
+          </noscript>
         </form>
       </div>
     </section>
@@ -226,7 +254,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img class="brand-logo brand-logo-light" src="CLEARPOOL-LOGO-WEB.png" alt="ClearPool" width="170" height="48" />
+        <img class="brand-logo brand-logo-light" src="CLEARPOOL-LOGO-WEB.png" alt="ClearPool" width="170" height="48" loading="lazy" decoding="async" />
         <p>Mantenimiento de piscinas y jardines en la Marina Alta.</p>
       </div>
       <nav class="footer-nav" aria-label="Pie de página">
@@ -235,10 +263,52 @@
         <a href="#zona">Zona</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <p class="footer-legal">© <span id="year"></span> ClearPool. Av. Botánico Cabanilles 13, bajos C, Jávea.</p>
+      <p class="footer-legal">© <span id="year">2026</span> ClearPool. Av. Botánico Cabanilles 13, bajos C, Jávea.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- CTA flotante de WhatsApp (visible en móvil, donde se oculta el botón de cabecera) -->
+  <a class="whatsapp-fab" href="https://wa.me/34606447461?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.14c-.24.68-1.42 1.31-1.96 1.36-.5.05-1.14.22-3.66-.76-3.05-1.18-4.99-4.2-5.14-4.4-.15-.2-1.24-1.65-1.24-3.15 0-1.5.79-2.24 1.07-2.55.28-.3.62-.38.83-.38.21 0 .41 0 .6.01.19.01.45-.07.7.54.26.63.88 2.27.96 2.44.08.17.13.36.03.58-.1.22-.15.36-.3.55-.15.2-.31.44-.45.59-.15.17-.3.36-.13.7.17.34.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.12.64-.07.17-.2.72-.84.91-1.13.19-.29.39-.24.66-.14.27.1 1.7.8 1.99.95.29.15.49.22.56.34.07.13.07.73-.17 1.41Z"/></svg>
+  </a>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "ClearPool",
+    "description": "Mantenimiento de piscinas y jardines en Jávea, Moraira y Teulada (Marina Alta, Alicante).",
+    "url": "https://eariasvalor.github.io/Clearpool/",
+    "image": "https://eariasvalor.github.io/Clearpool/CLEARPOOL-LOGO-WEB.png",
+    "logo": "https://eariasvalor.github.io/Clearpool/CLEARPOOL-LOGO-WEB.png",
+    "telephone": "+34606447461",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Botánico Cabanilles 13, bajos C",
+      "addressLocality": "Jávea",
+      "addressRegion": "Alicante",
+      "addressCountry": "ES"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Jávea" },
+      { "@type": "City", "name": "Moraira" },
+      { "@type": "City", "name": "Teulada" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento y reparación de piscinas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de jardines" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Poda de palmeras" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Limpieza de parcelas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de comunidades y urbanizaciones" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento y cuidado de viviendas" } }
+      ]
+    }
+  }
+  </script>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
