@@ -295,6 +295,10 @@ a { color: inherit; }
 
 /* ---------- Quote band ---------- */
 .quote-band {
+  /* Esta seccion no lleva la clase .section, asi que necesita su propio
+     relleno vertical. Algo mas ajustado que una seccion normal: es una
+     banda de llamada a la accion, no un bloque de contenido. */
+  padding: clamp(56px, 8vw, 88px) 0;
   background: var(--arena);
   background-image:
     radial-gradient(circle at 12% 20%, rgba(48, 168, 192, 0.20), transparent 42%),
