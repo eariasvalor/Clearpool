@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  // Foto fija + las letras se mueven al hacer scroll
-  // (la ola NO se mueve aquí: va anclada al borde inferior del hero)
+  // Solo la foto se mantiene fija; el texto y la ola scrollean juntos con la
+  // pagina, para que la distancia entre ambos no cambie al bajar.
   var heroBg = document.querySelector(".hero-bg");
   var heroInner = document.querySelector(".hero-inner");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -13,8 +13,8 @@
       // La foto se mantiene fija en el viewport (contra-resta el scroll)
       if (heroBg) heroBg.style.transform = "translate3d(0," + y + "px,0)";
       var heroH = (heroInner ? heroInner.offsetHeight : 600) + 240;
+      // Sin desplazamiento vertical: solo se atenua al salir de pantalla.
       if (heroInner) {
-        heroInner.style.transform = "translate3d(0," + (-y * 0.35) + "px,0)";
         heroInner.style.opacity = String(Math.max(0, 1 - y / heroH));
       }
       ticking = false;
