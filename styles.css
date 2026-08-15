@@ -68,7 +68,6 @@ a { color: inherit; }
   margin: 0 0 14px;
 }
 .eyebrow-light { color: var(--sol); }
-.eyebrow-dark { color: var(--olivo); }
 
 .section-title {
   font-family: var(--display);
@@ -170,7 +169,13 @@ a { color: inherit; }
   right: 0;
   top: -25%;
   height: 150%;
-  background-image: url("fondo.avif");
+  /* La 1a linea es el respaldo para navegadores sin image-set().
+     Generadas desde fondo2.jpg (el original de 4096px se conserva sin usar). */
+  background-image: url("fondo2-web.jpg?v=2");
+  background-image: image-set(
+    url("fondo2-web.avif?v=2") type("image/avif"),
+    url("fondo2-web.jpg?v=2") type("image/jpeg")
+  );
   background-size: cover;
   background-position: center;
   z-index: 0;
