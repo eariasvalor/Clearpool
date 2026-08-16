@@ -486,6 +486,15 @@ a { color: inherit; }
 .contact-list-wrap { font-style: normal; }
 .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
 .contact-list li { display: flex; align-items: flex-start; gap: 14px; font-weight: 500; }
+/* El texto se centra dentro de los mismos 40px que ocupa el icono, asi que
+   las lineas de una sola fila quedan a su altura. Las de varias lineas
+   superan los 40px y siguen alineadas por arriba, como debe ser.
+   De paso, el enlace gana 40px de alto de area tactil en movil. */
+.contact-list li > :not(.contact-ico) {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
 .contact-list a { text-decoration: none; font-weight: 600; color: var(--mar); }
 .contact-list a:hover { color: var(--agua); }
 .contact-ico {
