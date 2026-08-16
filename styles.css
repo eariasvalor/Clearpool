@@ -264,6 +264,8 @@ a { color: inherit; }
 .section { padding: clamp(64px, 10vw, 110px) 0; }
 .section-head { max-width: 620px; margin-bottom: 48px; }
 .section-lead { color: var(--muted); font-size: 1.08rem; margin: 0; }
+.section-lead a { color: var(--agua); font-weight: 600; text-underline-offset: 3px; }
+.section-lead a:hover { color: var(--mar); }
 
 /* ---------- Services ---------- */
 .service-grid {
@@ -275,6 +277,7 @@ a { color: inherit; }
   gap: 22px;
 }
 .service-card {
+  position: relative;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -310,6 +313,14 @@ a { color: inherit; }
   font-size: 0.92rem;
 }
 .service-link:hover { color: var(--mar); }
+/* Extiende el area clicable a toda la tarjeta manteniendo un unico enlace,
+   que es lo que anuncia el lector de pantalla. */
+.service-link::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.service-card:focus-within { box-shadow: var(--shadow); }
+.service-link:focus-visible { outline: none; }
+.service-card:has(.service-link:focus-visible) { outline: 3px solid var(--agua); outline-offset: 3px; }
+/* Enlace de las tarjetas que llevan a una pagina propia, no al formulario. */
+.service-link-page { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ---------- Quote band ---------- */
 .quote-band {
@@ -529,6 +540,19 @@ a { color: inherit; }
 .footer-nav { display: flex; flex-wrap: wrap; gap: 22px; }
 .footer-nav a { text-decoration: none; font-weight: 500; }
 .footer-nav a:hover { color: #fff; }
+.footer-heading {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(248, 245, 239, 0.55);
+  margin: 0 0 10px;
+}
+.footer-services ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer-services a { text-decoration: none; font-weight: 500; }
+.footer-services a:hover { color: #fff; }
+.footer-services [aria-current="page"] { color: rgba(248, 245, 239, 0.5); }
 .footer-legal { margin: 0; font-size: 0.85rem; color: rgba(248, 245, 239, 0.6); border-top: 1px solid rgba(255,255,255,0.14); padding-top: 18px; }
 
 /* ---------- CTA flotante de WhatsApp ---------- */
@@ -559,6 +583,87 @@ a { color: inherit; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .waterline svg path { animation: none; }
 }
+
+/* ---------- Landings de servicio ---------- */
+.page-hero {
+  background: linear-gradient(160deg, var(--mar) 0%, var(--mar-2) 100%);
+  color: var(--espuma);
+  padding: clamp(36px, 6vw, 64px) 0 clamp(52px, 8vw, 88px);
+}
+.breadcrumb { margin: 0 0 20px; font-size: 0.85rem; }
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; }
+.breadcrumb li + li::before { content: "›"; margin-right: 8px; opacity: 0.6; }
+.breadcrumb a { color: rgba(255, 255, 255, 0.88); }
+.breadcrumb [aria-current] { color: rgba(255, 255, 255, 0.62); }
+.page-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.75rem, 4.6vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  margin: 0 0 18px;
+  max-width: 900px;
+}
+.page-lead {
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 640px;
+  margin: 0 0 30px;
+}
+.section-alt { background: var(--arena); }
+
+.prose { max-width: 760px; }
+.prose p { color: var(--muted); margin: 0 0 16px; }
+.prose strong { color: var(--tinta); }
+.prose h3 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--mar);
+  margin: 28px 0 10px;
+}
+.check-list { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 10px; }
+.check-list li { position: relative; padding-left: 30px; color: var(--muted); }
+.check-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0.45em;
+  width: 16px; height: 9px;
+  border-left: 2.5px solid var(--agua);
+  border-bottom: 2.5px solid var(--agua);
+  transform: rotate(-45deg);
+}
+.prose-cta { margin: 26px 0 0; }
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 4px 0;
+}
+.faq-item summary {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.02rem;
+  color: var(--mar);
+  cursor: pointer;
+  padding: 16px 32px 16px 0;
+  position: relative;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "";
+  position: absolute;
+  right: 6px; top: 50%;
+  width: 9px; height: 9px;
+  border-right: 2.5px solid var(--agua);
+  border-bottom: 2.5px solid var(--agua);
+  transform: translateY(-70%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] summary::after { transform: translateY(-30%) rotate(225deg); }
+.faq-item summary:focus-visible { outline: 3px solid var(--agua); outline-offset: 3px; }
+.faq-item p { margin: 0 0 18px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
