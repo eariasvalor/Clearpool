@@ -635,6 +635,10 @@ a { color: inherit; }
   transform: rotate(-45deg);
 }
 .prose-cta { margin: 26px 0 0; }
+/* .prose p gana por especificidad (0,1,1) a los parrafos con clase propia
+   (0,1,0) y les anula el margen superior. Estas dos reglas se lo devuelven. */
+.prose .zone-note { margin: 26px 0 0; }
+.prose .prose-cta { margin: 30px 0 0; }
 
 .faq-item {
   border-bottom: 1px solid var(--line);
